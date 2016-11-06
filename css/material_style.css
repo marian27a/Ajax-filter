@@ -1,0 +1,9 @@
+.text-input{
+	display: inline-block;
+}
+.text-input + .btn-floating{
+	margin-left: 25px;
+}
+h6{
+	font-weight: 500;
+}
