@@ -1,0 +1,117 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/material_style.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+       
+      <div class="container">
+        <h3>Simple filter with category</h3>
+        <div class="row">
+          <div class="col s4">
+            <h5>Category condition</h5>
+            <div>
+              <input type="checkbox" class="filled-in" id="filled-in-box" value="Mint" data-target="#condition"/>
+              <label for="filled-in-box">Mint</label>
+            </div>
+            <div>
+              <input type="checkbox" class="filled-in" id="filled-in-box2" value="Excellent" data-target="#condition"/>
+              <label for="filled-in-box2">Excellent</label>
+            </div>
+            <div>
+              <input type="checkbox" class="filled-in" id="filled-in-box3" value="Good" data-target="#condition"/>
+              <label for="filled-in-box3">Good</label>
+            </div>
+          </div>
+          <div class="col s8">
+            <div class="card">
+              <div class="card-content">
+                <h6>Output text filter</h6>
+                <div class="chose-box chose-condition">
+                  <span>Condition:  </span><div class="text-input" id="condition"></div>
+                  <a class="btn-floating btn-small waves-effect waves-light red reset-category"><i class="material-icons">close</i></a>
+               </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <h5>Category price</h5>
+            <div>
+              <input type="checkbox" class="filled-in" id="price1" value="100$" data-target="#price"/>
+              <label for="price1">100$</label>
+            </div>
+            <div>
+              <input type="checkbox" class="filled-in" id="price2" value="200$" data-target="#price"/>
+              <label for="price2">200$</label>
+            </div>
+          </div>
+          <div class="col s8">
+            <div class="card">
+              <div class="card-content">
+                <h6>Output text filter for category Price</h6>
+                <div class="chose-box chose-condition">
+
+                  <span>Price:  </span><div class="text-input" id="price"></div>
+                  <a class="btn-floating btn-small waves-effect waves-light red reset-category"><i class="material-icons">close</i></a>
+               </div>
+               <h6>If need all in one</h6>
+               <div class="chose-box chose-condition">
+
+                  <span>All checked:  </span><div class="text-input" id="all"></div>
+               </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s3">
+            <a class="waves-effect waves-light btn reset-all ">reset all</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div class="loader">
+              <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-green-only">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-load">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/magic-filter-jQuery.js"></script>
+      <script>
+        $('.filled-in').magicFilter({
+          separator: '-',
+        })
+      </script>
+    </body>
+  </html>
+        
